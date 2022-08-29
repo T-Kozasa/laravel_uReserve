@@ -19,7 +19,7 @@
                     </div>
                 @endif
 
-                <form method="get" action="{{ route('events.edit',['event => $event -> id']) }}">
+                <form method="get" action="{{ route('events.edit', ['event' => $event->id])}}">
                     {{-- @csrf --}}
                     
                     {{-- イベント名タブ --}}
@@ -67,9 +67,11 @@
                                 非表示
                             @endif
                         </div>
+                        @if($event->eventDate >= \Carbon\Carbon::today()->format('Y年m月d日'))
                         <x-jet-button class="ml-4">
                             編集する
                         </x-jet-button>
+                        @endif 
                     </div>
                 </form>
             </div>
