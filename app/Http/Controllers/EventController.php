@@ -7,7 +7,7 @@ use App\Http\Requests\UpdateEventRequest;
 use App\Models\Event;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use App\Services\EventService;
+use App\Services\EventServices;
 
 class EventController extends Controller
 {
@@ -44,11 +44,11 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        $check = EventService::checkEventDuplication(
+        $check = EventServices::checkEventDuplication(
             $request['event_date'],
             $request['start_time'],
             $request['end_time']
-            )
+        );
 
         // $check = DB::table('events')
         // ->whereDate('start_date', $request['event_date']) // 日にち
@@ -62,14 +62,14 @@ class EventController extends Controller
             return view('manager.events.create');
             }
         
-        $startDate = EventService::joinDateAndTime(
+        $startDate = EventServices::joinDateAndTime(
             $request['event_date'],
             $request['start_time']
-        )
-        $endDate = EventService::joinDateAndTime(
+        );
+        $endDate = EventServices::joinDateAndTime(
             $request['event_date'],
             $request['end_time']
-        )
+        );
 
         // ddでちゃんとcreate.blade.phpの登録ボタンが稼働するかチェック
         // dd($request);
@@ -105,7 +105,15 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $event = Event::findOrFail($event->id);
+        $eventDate = $event->eventDate;
+        $startTime = $event->startTime;
+        $endTime = $event->endTime;
+
+        // dd($eventDate, $startTime, $endTime);
+
+
+        return view('manager.events.show', compact('event','eventDate', 'startTime', 'endTime'));
     }
 
     /**
