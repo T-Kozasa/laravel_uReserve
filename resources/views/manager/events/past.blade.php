@@ -16,11 +16,11 @@
                         <table class="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                             <tr>
-                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">イベント名</th>
+                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">予約番号</th>
                                 <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">開始日時</th>
                                 <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">終了日時</th>
                                 <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">予約人数</th>
-                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">定員</th>
+                                {{-- <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">定員</th> --}}
                                 <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">表示・非表示</th>
                                 <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
                             </tr>
@@ -38,7 +38,7 @@
                                     {{ $event->number_of_people }}
                                     @endif
                                 </td>
-                                <td class="px-4 py-3">{{ $event->max_people }}</td>
+                                {{-- <td class="px-4 py-3">{{ $event->max_people }}</td> --}}
                                 <td class="px-4 py-3">{{ $event->is_visible }}</td>
                             </tr>
                             @endforeach

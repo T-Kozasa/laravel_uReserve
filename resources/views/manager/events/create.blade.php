@@ -23,21 +23,21 @@
                     @csrf
                     
                     {{-- イベント名タブ --}}
-                    <div>
-                        <x-jet-label for="event_name" value="イベント名" />
+                    {{-- <div>
+                        <x-jet-label for="event_name" value="予約名" />
                         <x-jet-input id="event_name" class="block mt-1 w-full" type="text" name="event_name" :value="old('event_name')" required autofocus />
-                    </div>
+                    </div> --}}
 
                     {{-- textarea.blade.phpの中身を反映 --}}
                     {{-- 詳細を記入するボックスの設置 --}}
-                    <div>
-                        <x-jet-label for="information" value="イベントの詳細" />
+                    {{-- <div>
+                        <x-jet-label for="information" value="予約の詳細" />
                         <x-textarea row="3" id="information" name="information" class="block mt-1 w-full">{{old('information')}}</x-textarea>
                     </div>
-                    
+                     --}}
                     {{-- 各タブのサイズ設定 --}}
                     <div class="md:flex justify-between">
-                    {{-- イベント日付・開始時間・終了時間タブの用意 --}}
+                    {{-- 日付・開始時間・終了時間タブの用意 --}}
                         <div class="mt-4">
                             <x-jet-label for="event_date" value="イベント日付" />
                             <x-jet-input id="event_date" class="block mt-1 w-full" type="text" name="event_date" required  />
@@ -60,11 +60,11 @@
                             <x-jet-label for="max_people" value="定員数" />
                             <x-jet-input id="max_people" class="block mt-1 w-full" type="number" name="max_people" required />
                         </div>
-                        <div class="flex space-x-4 justify-around">
+                        <div class="flex space-x-4 justify-around mt-12">
                             <input type="radio" name="is_visible" value="1" checked />表示
                             <input type="radio" name="is_visible" value="0" checked />非表示
                         </div>
-                        <x-jet-button class="ml-4">
+                        <x-jet-button class="ml-4 mt-10">
                             新規登録
                         </x-jet-button>
                     </div>

@@ -24,22 +24,22 @@
                     
                     {{-- イベント名タブ --}}
                     <div>
-                        <x-jet-label for="event_name" value="イベント名" />
+                        <x-jet-label for="event_name" value="予約番号" />
                         {{$event ->name}}
                     </div>
 
                     {{-- textarea.blade.phpの中身を反映 --}}
                     {{-- 詳細を記入するボックスの設置 --}}
-                    <div>
-                        <x-jet-label for="information" value="イベントの詳細" />
+                    {{-- <div>
+                        <x-jet-label for="information" value="予約の詳細" />
                         {!! nl2br(e($event->information)) !!} 
-                    </div>
+                    </div> --}}
                     
                     {{-- 各タブのサイズ設定 --}}
                     <div class="md:flex justify-between">
                     {{-- イベント日付・開始時間・終了時間タブの用意 --}}
                         <div class="mt-4">
-                            <x-jet-label for="event_date" value="イベント日付" />
+                            <x-jet-label for="event_date" value="予約日" />
                             {{ $event->eventDate }} 
                         </div>
                         
@@ -60,19 +60,23 @@
                             <x-jet-label for="max_people" value="定員数" />
                             {{ $event->max_people }}
                         </div>
-                        <div class="flex space-x-4 justify-around">
+                        <div class="flex space-x-4 justify-around mt-8">
                             @if($event->is_visible)
                                 表示中
                             @else
                                 非表示
                             @endif
                         </div>
-                        @if($event->eventDate >= \Carbon\Carbon::today()->format('Y年m月d日'))
-                        <x-jet-button class="ml-4">
+                    </div>
+                    <div>
+                        <x-jet-label for="information" value="カルテ" class="mt-6" />
+                        {!! nl2br(e($event->information)) !!}
+                    </div>
+                    @if($event->eventDate >= \Carbon\Carbon::today()->format('Y年m月d日'))
+                        <x-jet-button class="mt-10">
                             編集する
                         </x-jet-button>
-                        @endif 
-                    </div>
+                    @endif
                 </form>
             </div>
                 {{-- 日付 <input type="text" id="event_date" name="event_date">
