@@ -24,16 +24,16 @@
                         @method('put')
                         {{-- イベント名タブ --}}
                         <div>
-                            <x-jet-label for="event_name" value="イベント名" />
+                            <x-jet-label for="event_name" value="予約番号" />
                             <x-jet-input id="event_name" class="block mt-1 w-full" type="text" name="event_name" value="{{$event->name}}" required autofocus />
                         </div>
 
                         {{-- textarea.blade.phpの中身を反映 --}}
                         {{-- 詳細を記入するボックスの設置 --}}
-                        <div>
+                        {{-- <div>
                             <x-jet-label for="information" value="イベントの詳細" />
                             <x-textarea row="3" id="information" name="information" class="block mt-1 w-full">{{$event->information}}</x-textarea>
-                        </div>
+                        </div> --}}
                         
                         {{-- 各タブのサイズ設定 --}}
                         <div class="md:flex justify-between">
@@ -60,14 +60,19 @@
                                 <x-jet-label for="max_people" value="定員数" />
                                 <x-jet-input id="max_people" class="block mt-1 w-full" type="number" name="max_people" value="{{$event->max_people}}" required />
                             </div>
-                            <div class="flex space-x-4 justify-around">
+                            <div class="mt-12 flex space-x-4 justify-around">
                                 <input type="radio" name="is_visible" value="1" @if($event->is_visible === 1 ){ checked } @endif  />表示
                                 <input type="radio" name="is_visible" value="0" @if($event->is_visible === 0 ){ checked } @endif />非表示
                             </div>
-                            <x-jet-button class="ml-4">
-                                更新する
-                            </x-jet-button>
+                           
                         </div>
+                        <div>
+                            <x-jet-label for="information" value="カルテ" class="mt-5"/>
+                            <x-textarea row="3" id="information" name="information" class="block mt-1 w-full">{{$event->information}}</x-textarea>
+                        </div>
+                        <x-jet-button class="ml-1 mt-5">
+                                更新する
+                        </x-jet-button>
                     </form>
                 </div>
             </div>
