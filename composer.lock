@@ -4056,7 +4056,7 @@
         {
             "name": "symfony/finder",
 
-            "version": "v6.0.12",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
