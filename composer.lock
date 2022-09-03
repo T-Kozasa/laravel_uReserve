@@ -3600,7 +3600,7 @@
                 "reference": "43fcb5c5966b43c56bcfa481368d90d748936ab8",
                 "shasum": ""
             },
-            //変更
+            
             "require": {
                 "php": ">=8.0",
                 "symfony/deprecation-contracts": "^2.1|^3",
@@ -3698,7 +3698,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "type": "library",
@@ -3764,7 +3764,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "type": "library",
@@ -3832,7 +3832,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "psr/log": "^1|^2|^3",
                 "symfony/var-dumper": "^5.4|^6.0"
@@ -3904,7 +3904,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "symfony/event-dispatcher-contracts": "^2|^3"
             },
@@ -3988,7 +3988,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "psr/event-dispatcher": "^1"
             },
@@ -4068,7 +4068,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "require-dev": {
@@ -4133,7 +4133,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-mbstring": "~1.1"
@@ -4206,7 +4206,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "psr/log": "^1|^2|^3",
                 "symfony/error-handler": "^6.1",
@@ -4318,7 +4318,7 @@
             },
             "require": {
                 "egulias/email-validator": "^2.1.10|^3",
-                //変更
+                
                 "php": ">=8.0",
                 "psr/event-dispatcher": "^1",
                 "psr/log": "^1|^2|^3",
@@ -4392,7 +4392,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "symfony/polyfill-intl-idn": "^1.10",
                 "symfony/polyfill-mbstring": "^1.0"
@@ -5087,7 +5087,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            //変更
+            
             "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
             "homepage": "https://symfony.com",
             "keywords": [
@@ -5130,7 +5130,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "type": "library",
@@ -5192,7 +5192,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "conflict": {
@@ -5281,7 +5281,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "psr/container": "^2.0"
             },
@@ -5367,7 +5367,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-grapheme": "~1.0",
@@ -5453,7 +5453,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+            
                 "php": ">=8.0",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/translation-contracts": "^2.3|^3.0"
@@ -5550,7 +5550,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0"
             },
             "suggest": {
@@ -5632,7 +5632,7 @@
                 "shasum": ""
             },
             "require": {
-                //変更
+                
                 "php": ">=8.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
